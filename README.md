@@ -41,5 +41,5 @@ Place the script in your preffered js tool (if using Tempermonkey, you can use a
 
 <img alt="Found spot alert" src="https://user-images.githubusercontent.com/7942533/222105494-d29d78ff-3807-4160-b250-4ce2538c93af.png" />
 
-**This script is for personal use only! I wrote it out of my own pesonal pain trying to find an appointment, please dont exploit it. A person who will be found as using this for commercial purposes, or will take money from people for applying the script for them, or will use it in any other way not intended by the author, will be reported and procecuted by law.**
+**IMPORTANT: This script is for personal use only! I wrote it out of my own pesonal pain trying to find an appointment, please dont exploit it. A person who will be found as using this for commercial purposes, taking money from people for using it, or using it in any other way not intended by the author, will be reported and prosecuted by law.**
 
