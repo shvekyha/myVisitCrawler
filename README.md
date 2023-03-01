@@ -1,4 +1,4 @@
-# myVisitCrawler
+# myVisitCrawler 🕵️
 This repo includes a js script that scan the myVisit website in order to find an appointment for renewing an existing expired passport.
 In order to run it, you'll need a way to run a custom js in the browser (I'm using [Tempermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)).
 
