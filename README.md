@@ -3,7 +3,7 @@ This repo includes a js script that scan the myVisit website in order to find an
 In order to run it, you'll need a way to run a custom js in the browser (I'm using [Tempermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)).
 
 >_NOTICE:
-For now this is the only purpose of the script, it searches only the **internal office (רשות האוכלוסין וההגירה)**, only for the service of renewing **biometric passport**, renewing an existing **expired** one (not first passport, not a stolen one or lost one etc). If you need any other service it can't be done by this specific script (cant be twicked to it if you really want)_
+For now this is the only purpose of the script, it searches only the **internal office (רשות האוכלוסין וההגירה)**, only for the service of issuing an **Isreali biometric passport**, renewing an existing **expired** one (not first passport, not a stolen one or lost one etc). If you need any other service it can't be done by this specific script (cant be twicked it if you really want)_
 
 
 
@@ -38,6 +38,8 @@ Place the script in your preffered js tool (if using Tempermonkey, you can use a
 - Click the button and wait
 - If you're using dev tools - you'll see the log writing as it advances and a comment if it **doesn't** find a spot at a location.
 - If a spot at a certain location is found it will pop up an alert with the details. You can click OK to stop the script and book the appointment **manually**, or click Cancel to continue the search.
+
+<img alt="Found spot alert" src="https://user-images.githubusercontent.com/7942533/222105494-d29d78ff-3807-4160-b250-4ce2538c93af.png" />
 
 **This script is for personal use only! I wrote it out of my own pesonal pain trying to find an appointment, please dont exploit it. A person who will be found as using this for commercial purposes, or will take money from people for applying the script for them, or will use it in any other way not intended by the author, will be reported and procecuted by law.**
 
