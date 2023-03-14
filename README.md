@@ -7,7 +7,7 @@ For now this is the only purpose of the script, it searches only the **internal 
 
 
 
->IMPORTANT: Because of CAPTHCA + 2FA the script cannot login for you! A login using your phone is needed, only then you can run the script for automating the search. Also, the script wont book an appointment for you, but rather pop an alert window once an appointment is found. So you'll need to be near the computer and wait for the result, then if a sopt was found and it's suitable for you, you can stop the script and book it manually.
+>IMPORTANT: Because of CAPTHCA + 2FA the script cannot login for you! A login using your phone is needed, only then you can run the script for automating the search. Also, the script wont book an appointment for you, but rather pop an alert window once an appointment is found. So you'll need to be near the computer and wait for the result, then if a spot was found and it's suitable for you, you can stop the script and book it manually.
 
 ### Using the script
 #### Custom the script to your needs
@@ -36,8 +36,8 @@ Place the script in your preffered js tool (if using Tempermonkey, you can use a
 - Notice the (really ugly) grey button at the top saying 'Find my spot!'
 - If you'd like to monitor the script as it goes, open dev tools on the console tab. 
 - Click the button and wait
-- If you're using dev tools - you'll see the log writing as it advances and a comment if it **doesn't** find a spot at a location.
-- If a spot at a certain location is found it will pop up an alert with the details. You can click OK to stop the script and book the appointment **manually**, or click Cancel to continue the search.
+- If you're using dev tools - you'll see the log writing as it advances (finding elements on the page) and a log writing if it **doesn't** find a spot at a location.
+- If a spot at a certain location is found, it will pop up an alert with the details. You can click OK to stop the script and book the appointment **manually**, or click Cancel to continue the search.
 
 <img alt="Found spot alert" src="https://user-images.githubusercontent.com/7942533/222116023-bf43ae49-534e-4bba-bca1-80cf13d8d088.png" />
 
