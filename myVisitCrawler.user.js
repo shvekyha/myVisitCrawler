@@ -84,6 +84,11 @@ const searchSpot = async (id, phoneNum) => {
     //continue btn
     document.querySelector('button.actionButton').click();
 
+    await waitForElement('div.list-item-body');
+
+    //biometric documentation
+    document.querySelectorAll('div.list-item-body')[0].click();
+
     await waitForElement('div.list-item-body.with-2icons');
 
     for (let index=START_FROM_LOCATION; index<LOCATION_NUM_TO_CHECK; index++){
@@ -133,9 +138,8 @@ const searchSpot = async (id, phoneNum) => {
         //click on back button
         document.querySelector('.appHeaderContent .pull-right.ng-isolate-scope .appHeader-button button').click();
 
-        await sleep(10000);
+        await sleep(8000);
     }
-
 }
 
 window.addEventListener('load', async function(){
