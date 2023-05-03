@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Search for a free passport renewal appointment
 // @author       Hadas Shveky-Teman
-// @match        https://myvisit.com
+// @match        https://*.myvisit.com
 // @grant        none
 // @run-at       document-idle
 // ==/UserScript==
@@ -16,7 +16,7 @@
 
   const LOCATION_NUM_TO_CHECK = 20;         //Number of locations to scan
   const LOCATION_SKIP_LIST = [];            //List of locations indexes to skip (0-based) - for example [13,20]
-  const MONTHS_SKIP_LIST = ['Aug','Jul'];   //List of months to skip when looking for an appointment
+  const MONTHS_SKIP_LIST = ['Nov','Dec'];   //List of months to skip when looking for an appointment
 
 //-----------------------
 
@@ -28,6 +28,7 @@ const sleep = (milliseconds) => {
 
 const waitForElement = async (elementSelector, numOfTrials) => {
     let trials = 0
+    console.log('waiting for ',elementSelector);
     while (!document.querySelector(elementSelector)){
         if (numOfTrials && trials >= numOfTrials) break;
         trials++
@@ -36,17 +37,19 @@ const waitForElement = async (elementSelector, numOfTrials) => {
     console.log('found ',elementSelector);
 }
 
-const searchSpot = async (id, phoneNum) => {
+const searchSpot = async (id, phoneNum, skipStart) => {
     const SERVICE_INDEX = 0;
     const START_FROM_LOCATION = 0;
 
-    //goverment services
-    document.querySelectorAll('li.icon-button-hvr-shrink')[2].click();
+    if (!skipStart){
+        //goverment services
+        document.querySelectorAll('li.icon-button-hvr-shrink')[2].click();
 
-    await waitForElement('li.provider-tile');
+        await waitForElement('li.provider-tile');
 
-    //interior office
-    document.querySelectorAll('li.provider-tile')[SERVICE_INDEX].click();
+        //interior office
+        document.querySelectorAll('li.provider-tile')[SERVICE_INDEX].click();
+    }
 
     await waitForElement('input#ID_KEYPAD');
 
@@ -143,17 +146,23 @@ const searchSpot = async (id, phoneNum) => {
 }
 
 window.addEventListener('load', async function(){
-    const BTN_PLACEMENT_SELECTOR = '.appHeader';
+  //The basterds are doing redirect to another url that causes the script to reload...
+  //So if thats the case - identify it and start from middle of script
+    if (window.location.host.includes('piba')){
+        searchSpot(ID, PHONE_NUMBER, true)
+    } else {
+        const BTN_PLACEMENT_SELECTOR = '.appHeader';
 
-    let btn = document.createElement('button');
-    btn.innerHTML = 'Find my spot!';
-    btn.style = 'margin-left: 20px; position:relative;'
-    btn.onclick = () => searchSpot(ID, PHONE_NUMBER);
+        let btn = document.createElement('button');
+        btn.innerHTML = 'Find my spot!';
+        btn.style = 'margin-left: 20px; position:relative;'
+        btn.onclick = () => searchSpot(ID, PHONE_NUMBER);
 
-    await waitForElement('li.icon-button-hvr-shrink');
+        await waitForElement('li.icon-button-hvr-shrink');
 
-    setTimeout(() => {
-        let div = document.querySelector(BTN_PLACEMENT_SELECTOR);
-        div.appendChild(btn);
-    },2000);
+        setTimeout(() => {
+            let div = document.querySelector(BTN_PLACEMENT_SELECTOR);
+            div.appendChild(btn);
+        },2000);
+    }
 });
