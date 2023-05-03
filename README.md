@@ -3,7 +3,7 @@ This repo includes a js script that scan the myVisit website in order to find an
 In order to run it, you'll need a way to run a custom js in the browser (I'm using [Tempermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)).
 
 >_NOTICE:
-For now this is the only purpose of the script, it searches only the **internal office (רשות האוכלוסין וההגירה)**, only for the service of issuing an **Isreali biometric passport**, renewing an existing **expired** one (not first passport, not a stolen one or lost one etc). If you need any other service it can't be done by this specific script (cant be twicked it if you really want)_
+For now this is the only purpose of the script, it searches only the **internal office (רשות האוכלוסין וההגירה)**, only for the service of issuing an **Isreali biometric passport**, renewing an existing **expired** one (not first passport, not a stolen one or lost one etc). If you need any other service it can't be done by this specific script (can be twicked if you really want)_
 
 
 
