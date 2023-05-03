@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         My Visit Crawler
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.3
 // @description  Search for a free passport renewal appointment
 // @author       Hadas Shveky-Teman
 // @match        https://*.myvisit.com
