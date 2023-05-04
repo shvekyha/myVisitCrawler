@@ -32,6 +32,7 @@ const MONTHS_SKIP_LIST = ['Aug','Jul'];   //List of months to skip when looking 
 #### Running the script
 Place the script in your preffered js tool (if using Tempermonkey, you can use as is, for other tools remove the comments in the beggining). Then follow these steps:
 - Go to [myVisit](https://myvisit.com/#!/home/il) website 
+>_(**NOTE**: never start from the new url which looks the same but have the prefix 'piba': https://piba.myvisit.com/ because the script wont work from there. Need to start from https://myvisit.com/ only)_
 - login with 2FA (enter phone number and code from SMS)
 - Notice the (really ugly) grey button at the top saying 'Find my spot!'
 - If you'd like to monitor the script as it goes, open dev tools on the console tab. 
